@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <channel>
+    <title>Amateur Radio Satellite Tracker</title>
+    <link>https://sawsaw99-stack.github.io/yoto-satellite-tracker/</link>
+    <language>en-us</language>
+    <description>Daily orbital pass predictions for Wisconsin</description>
+    <item>
+      <title>Daily Briefing - Tuesday, June 16</title>
+      <pubDate>Tue, 16 Jun 2026 14:10:34 -0500</pubDate>
+      <enclosure url="https://sawsaw99-stack.github.io/yoto-satellite-tracker/satellite_feed.mp3" type="audio/mpeg"/>
+      <guid isPermaLink="false">satellite-pass-2026-06-16</guid>
+      <itunes:duration>180</itunes:duration>
+    </item>
+  </channel>
+</rss>
