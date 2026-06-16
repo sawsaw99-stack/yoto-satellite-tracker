@@ -19,10 +19,10 @@ os.makedirs(ARCHIVE_DIR, exist_ok=True)
 
 SATELLITE_FLEET = [
     [27607, "The S O 50 amateur radio satellite", False],
-    [43017, "The A O 91 Fox 1B satellite", False],
+    [43017, "The A O 91 Fox 1B satellite", True],
     [43678, "The P O 101 Diwata satellite", False],
     [40931, "The I O 86 LAPAN satellite", False],
-    [61781, "The A O 123 satellite", True],
+    [61781, "The A O 123 satellite", False],
     [68446, "The S O 127 Hades satellite", False],
     [25544, "The International Space Station", False]
 ]
