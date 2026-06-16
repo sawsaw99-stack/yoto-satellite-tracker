@@ -1,0 +1,39 @@
+name: Daily Satellite Audio Update
+
+on:
+  schedule:
+    # 07:00 UTC translates exactly to 2:00 AM Central Time every single night!
+    - cron: '0 7 * * *'
+  workflow_dispatch:
+
+jobs:
+  run-tracker:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        pip install requests GitPython timezonefinder pytz gtts
+
+    - name: Run Satellite Tracker Script
+      env:
+        N2YO_API_KEY: ${{ secrets.N2YO_API_KEY }}
+        HOME_LAT: ${{ secrets.HOME_LAT }}
+        HOME_LONG: ${{ secrets.HOME_LONG }}
+        HOME_ALT: ${{ secrets.HOME_ALT }}
+      run: python tracker.py
+
+    - name: Commit and Push Updated Audio
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git add satellite_feed.mp3 podcast.xml archives/
+        git diff-index --quiet HEAD || git commit -m "Automated daily gTTS update with rolling archive"
+        git push
