@@ -6,10 +6,10 @@
     <language>en-us</language>
     <description>Daily orbital pass predictions for Wisconsin</description>
     <item>
-      <title>Daily Briefing - Monday, August 24</title>
-      <pubDate>Mon, 24 Aug 2026 02:51:43 -0500</pubDate>
+      <title>Daily Briefing - Tuesday, August 25</title>
+      <pubDate>Tue, 25 Aug 2026 02:37:40 -0500</pubDate>
       <enclosure url="https://sawsaw99-stack.github.io/yoto-satellite-tracker/satellite_feed.mp3" type="audio/mpeg"/>
-      <guid isPermaLink="false">satellite-pass-2026-08-24</guid>
+      <guid isPermaLink="false">satellite-pass-2026-08-25</guid>
       <itunes:duration>180</itunes:duration>
     </item>
   </channel>
